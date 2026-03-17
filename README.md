@@ -18,7 +18,3 @@ shide provides clean, readable typography and layout for documents and small sit
 - Small, dependency-free, and easy to integrate
 
 [Demo](https://duras.codeberg.page/shide/)
-
-## License
-
-Licensed under the [ISC License](https://opensource.org/licenses/ISC).
