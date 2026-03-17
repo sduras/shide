@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shide.css — element reference</title>
+    <link rel="stylesheet" href="shide.css" />
+    <meta
+      name="description"
+      content="shide.css is a minimal semantic CSS stylesheet for text-first interfaces. No classes required—this reference demonstrates all supported HTML elements using native markup."
+    />
+    <meta
+      name="keywords"
+      content="css, minimal css, semantic css, stylesheet, html elements, typography, web design, lightweight css"
+    />
+    <meta name="author" content="Sergiy Duras" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://duras.codeberg.page/shide/" />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="shide.css — element reference" />
+    <meta
+      property="og:description"
+      content="A minimal semantic stylesheet for text-first interfaces. Explore all supported HTML elements styled with zero classes."
+    />
+    <meta property="og:url" content="https://duras.codeberg.page/shide/" />
+    <meta
+      property="og:image"
+      content="https://duras.codeberg.page/shide/preview.png"
+    />
+    <meta property="og:site_name" content="shide.css" />
+    <style>
+      .swatch-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: var(--gap);
+      }
+      .swatch {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: var(--font-mono);
+        font-size: 0.8em;
+      }
+      .swatch-dot {
+        width: 1.2em;
+        height: 1.2em;
+        border-radius: 2px;
+        border: 1px solid var(--border);
+        flex-shrink: 0;
+      }
+      #shide-h1::before {
+        content: "\0026A1  ";
+      }
+
+      .download-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 10vh;
+      }
+
+      .download-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4em;
+
+        padding: 0.6rem 1rem;
+        border-radius: var(--radius);
+
+        background: ButtonFace;
+        color: ButtonText;
+        text-decoration: none;
+
+        border: 1px solid var(--border);
+        font-weight: 600;
+        letter-spacing: 0.02em;
+
+        transition:
+          background 0.15s ease,
+          transform 0.05s ease;
+      }
+
+      @media (hover: hover) {
+        .download-button:hover {
+          background: color-mix(in srgb, ButtonFace 85%, CanvasText);
+        }
+      }
+
+      .download-button:active {
+        transform: translateY(1px);
+      }
+
+      .download-button:focus-visible {
+        outline: 2px solid LinkText;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#typography" class="active">Typography</a></li>
+          <li><a href="#prose">Prose</a></li>
+          <li><a href="#code">Code</a></li>
+          <li><a href="#tables">Tables</a></li>
+          <li><a href="#forms">Forms</a></li>
+          <li><a href="#layout">Layout</a></li>
+          <li><a href="#media">Media</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <section>
+        <h1 id="shide-h1">shide.css</h1>
+        <p>
+          A minimal semantic stylesheet for text-first interfaces. No classes
+          needed for most elements — this page demonstrates every element the
+          stylesheet targets, using only native HTML.
+        </p>
+        <p>
+          Part of the <strong>issei</strong> ecosystem of tools.<br />
+          <small>SPDX-License-Identifier: ISC.</small>
+          <a
+            href="https://spdx.org/licenses/ISC.html"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="https://img.shields.io/badge/license-ISC-blue.svg"
+              alt="License: ISC"
+              height="20"
+            />
+          </a>
+        </p>
+      </section>
+      <div class="download-wrapper">
+        <a
+          href="https://codeberg.org/duras/shide/archive/pages.zip"
+          download
+          class="download-button"
+        >
+          ⬇ Download
+        </a>
+      </div>
+
+      <hr />
+      <section id="typography">
+        <h2>Typography</h2>
+
+        <h3>Heading scale</h3>
+
+        <h1>h1 — Display heading</h1>
+        <h2>h2 — Section heading</h2>
+        <h3>h3 — Subsection heading</h3>
+        <h4>h4 — Group heading</h4>
+        <h5>h5 — Minor heading</h5>
+        <h6>h6 — Label heading</h6>
+
+        <h3>Inline elements</h3>
+        <p>
+          Regular paragraph text with <strong>bold (strong)</strong>,
+          <em>italic (em)</em>, <u>underline</u>, <s>strikethrough</s>,
+          <mark>highlighted text</mark>, and <small>small text</small>.
+          Superscript<sup>2</sup> and subscript H<sub>2</sub>O. An
+          <abbr title="Abbreviation">abbr</abbr> element. A
+          <cite>citation element</cite>. <kbd>Ctrl</kbd>+<kbd>C</kbd> keyboard
+          input.
+        </p>
+
+        <h3>System color tokens</h3>
+        <p>
+          All colors are CSS system keywords — no hardcoded hex values. With
+          <code>color-scheme: light dark;</code>, the UI automatically adapts to
+          the user’s light/dark mode.
+        </p>
+        <div class="swatch-row">
+          <span class="swatch"
+            ><span class="swatch-dot" style="background: Canvas"></span
+            >Canvas</span
+          >
+          <span class="swatch"
+            ><span class="swatch-dot" style="background: CanvasText"></span
+            >CanvasText</span
+          >
+          <span class="swatch"
+            ><span class="swatch-dot" style="background: GrayText"></span
+            >GrayText</span
+          >
+          <span class="swatch"
+            ><span class="swatch-dot" style="background: LinkText"></span
+            >LinkText</span
+          >
+          <span class="swatch"
+            ><span class="swatch-dot" style="background: ButtonFace"></span
+            >ButtonFace</span
+          >
+          <span class="swatch"
+            ><span class="swatch-dot" style="background: ButtonText"></span
+            >ButtonText</span
+          >
+        </div>
+      </section>
+      <section id="prose">
+        <h2>Prose elements</h2>
+        <h3>Paragraphs &amp; links</h3>
+        <p>
+          The <a href="#">default link</a> inherits the system
+          <code>LinkText</code> color. Long prose is capped at 65ch for
+          comfortable reading. <code>overflow-wrap: break-word</code> handles
+          long URLs or
+          <a href="#"
+            >an-extremely-long-unbreakable-token-that-would-otherwise-overflow-the-container</a
+          >
+          gracefully.
+        </p>
+        <h3>Blockquote</h3>
+        <blockquote>
+          <p>
+            I don't think I talk differently than anyone else does. Maybe
+            sometimes I don't not say things that other people don't not say,
+            but most other people don't not say the same things I don't. You
+            know what I'm saying?
+          </p>
+          <footer>Charlie Crews</footer>
+        </blockquote>
+        <h3>Lists</h3>
+        <ul>
+          <li>Unordered list item</li>
+          <li>
+            Another item
+            <ul>
+              <li>Nested item one</li>
+              <li>Nested item two</li>
+            </ul>
+          </li>
+          <li>Third item</li>
+        </ul>
+        <ol>
+          <li>Ordered list item</li>
+          <li>
+            Second item
+            <ol>
+              <li>Nested ordered item</li>
+              <li>Another nested item</li>
+            </ol>
+          </li>
+          <li>Third item</li>
+        </ol>
+        <h3>Definition list</h3>
+        <dl>
+          <dt>Canvas</dt>
+          <dd>The default background color of HTML content.</dd>
+          <dt>CanvasText</dt>
+          <dd>Text rendered on top of <code>Canvas</code>.</dd>
+          <dt>GrayText</dt>
+          <dd>Text for disabled or secondary content.</dd>
+        </dl>
+        <h3>Horizontal rule</h3>
+        <p>A full-width structural divider, not constrained to 65ch.</p>
+        <hr />
+        <p>Content resumes after the rule.</p>
+        <h3>Details &amp; summary</h3>
+        <details>
+          <summary>What is shide.css?</summary>
+          <p>
+            A minimal semantic CSS template designed for text-first interfaces.
+            Relies on system colors, native HTML semantics, and a single custom
+            font stack.
+          </p>
+        </details>
+        <details>
+          <summary>Installation</summary>
+          <p>
+            Drop <code>shide.css</code>, <code>sans.woff</code>,
+            <code>sans-bold.woff</code>, and <code>mono.woff</code>
+            into your project directory and link the stylesheet.
+          </p>
+        </details>
+      </section>
+      <section id="code">
+        <h2>Code</h2>
+        <h3>Inline code</h3>
+        <p>
+          Use <code>color-mix(in srgb, CanvasText 10%, transparent)</code> for
+          muted backgrounds that respect the active color scheme. The
+          <code>font-variant-numeric: tabular-nums</code> property aligns
+          numbers in tables.
+        </p>
+        <h3>Code block</h3>
+        <pre><code>/* shide.css — variable reference */
+:root {
+  --font-sans: "Seravek", system-ui, -apple-system, sans-serif;
+  --font-mono: "Agave", ui-monospace, monospace;
+  --gap:            1.5rem;
+  --radius:         4px;
+  --container-width: 760px;
+  --border: color-mix(in srgb, GrayText 40%, transparent);
+}</code></pre>
+        <h3>Shell session</h3>
+        <pre><code>$ doas pkg_add firefox
+quirks-7.12 signed on 2025-06-01T12:00:00Z
+firefox-128.0: ok
+$</code></pre>
+        <pre>
+         “Fury said to a
+         mouse, That he
+        met in the
+       house,
+     ‘Let us
+      both go to
+       law: <i>I</i> will
+        prosecute
+         <i>you</i>.—Come,
+           I’ll take no
+           denial; We
+          must have a
+        trial: For
+      really this
+     morning I’ve
+    nothing
+    to do.’
+      Said the
+      mouse to the
+       cur, ‘Such
+        a trial,
+         dear sir,
+            With
+          no jury
+        or judge,
+       would be
+      wasting
+      our
+      breath.’
+        ‘I’ll be
+        judge, I’ll
+         be jury,’
+             Said
+         cunning
+          old Fury:
+          ‘I’ll
+          try the
+            whole
+            cause,
+              and
+           condemn
+           you
+          to
+           death.’”
+</pre
+        >
+        <h3>Keyboard input</h3>
+        <p>
+          Save the file with <kbd>Ctrl</kbd>+<kbd>S</kbd>, then reload the
+          browser with <kbd>F5</kbd>.
+        </p>
+        <h3>Sample output</h3>
+        <p>Terminal returned: <samp>Permission denied (publickey).</samp></p>
+      </section>
+
+      <section id="tables">
+        <h2>Tables</h2>
+        <p>
+          Wrap tables in <code>.table-wrap</code> to enable horizontal scrolling
+          on narrow viewports without affecting the page layout.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <caption>
+              OpenBSD release history (excerpt)
+            </caption>
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Released</th>
+                <th>Theme song</th>
+                <th>New features</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>7.4</td>
+                <td>2023-10-16</td>
+                <td>The Blob</td>
+                <td>arm64 improvements, new drivers</td>
+              </tr>
+              <tr>
+                <td>7.5</td>
+                <td>2024-04-05</td>
+                <td>Be Prepared</td>
+                <td>vmm/vmd updates, network improvements</td>
+              </tr>
+              <tr>
+                <td>7.6</td>
+                <td>2024-10-08</td>
+                <td>Hackers of the Lost Packets</td>
+                <td>pledge/unveil expansions, installer updates</td>
+              </tr>
+              <tr>
+                <td>7.7</td>
+                <td>2025-04-05</td>
+                <td>Redundancy</td>
+                <td>RISC-V support, USB improvements</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Minimal table</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>--gap</code></td>
+                <td>1.5rem</td>
+              </tr>
+              <tr>
+                <td><code>--radius</code></td>
+                <td>4px</td>
+              </tr>
+              <tr>
+                <td><code>--container-width</code></td>
+                <td>760px</td>
+              </tr>
+              <tr>
+                <td><code>--border</code></td>
+                <td>color-mix(in srgb, GrayText 40%, transparent)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="forms">
+        <h2>Forms</h2>
+        <p>
+          All inputs inherit the body font and respect the active color scheme
+          via system color keywords. No custom component library needed.
+        </p>
+        <fieldset>
+          <legend>Contact</legend>
+          <p>
+            <label for="name">Name</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              autocomplete="name"
+            />
+          </p>
+          <p>
+            <label for="email">Email</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="user@example.com"
+              autocomplete="email"
+            />
+          </p>
+          <p>
+            <label for="subject">Subject</label><br />
+            <select id="subject" name="subject">
+              <option value="">— select —</option>
+              <option value="bug">Bug report</option>
+              <option value="feature">Feature request</option>
+              <option value="other">Other</option>
+            </select>
+          </p>
+          <p>
+            <label for="message">Message</label><br />
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              cols="40"
+              placeholder="Write something useful."
+            ></textarea>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="subscribe" />
+              Subscribe to release announcements
+            </label>
+          </p>
+          <p>
+            <strong>Preferred contact method</strong><br />
+            <label
+              ><input type="radio" name="contact" value="email" /> Email</label
+            ><br />
+            <label><input type="radio" name="contact" value="irc" /> IRC</label
+            ><br />
+            <label
+              ><input type="radio" name="contact" value="none" /> None</label
+            >
+          </p>
+          <p>
+            <label for="satisfaction">Satisfaction (0–10)</label><br />
+            <input
+              type="range"
+              id="satisfaction"
+              name="satisfaction"
+              min="0"
+              max="10"
+              value="8"
+            />
+          </p>
+          <p>
+            <label for="upload">Attach a file</label><br />
+            <input type="file" id="upload" name="upload" />
+          </p>
+          <p>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </p>
+        </fieldset>
+        <h3>Progress &amp; output</h3>
+        <p>Build progress: <progress value="72" max="100">72%</progress></p>
+        <p>Result: <output>72 / 100</output></p>
+        <h3>Disabled &amp; readonly states</h3>
+        <p>
+          <input type="text" value="Disabled input" disabled /><br /><br />
+          <input type="text" value="Readonly input" readonly />
+        </p>
+      </section>
+      <section id="layout">
+        <h2>Layout</h2>
+        <h3>Four-column grid</h3>
+        <p>
+          The <code>.grid</code> utility divides into four equal columns. Use
+          <code>.col-2</code> to span two, or <code>.col-full</code>
+          for a full-width item. Collapses to one column below 600px.
+        </p>
+        <div class="grid" style="margin-bottom: var(--gap)">
+          <div
+            style="
+              background: color-mix(in srgb, CanvasText 8%, transparent);
+              padding: 1rem;
+              border-radius: var(--radius);
+            "
+          >
+            col 1
+          </div>
+          <div
+            style="
+              background: color-mix(in srgb, CanvasText 8%, transparent);
+              padding: 1rem;
+              border-radius: var(--radius);
+            "
+          >
+            col 2
+          </div>
+          <div
+            style="
+              background: color-mix(in srgb, CanvasText 8%, transparent);
+              padding: 1rem;
+              border-radius: var(--radius);
+            "
+          >
+            col 3
+          </div>
+          <div
+            style="
+              background: color-mix(in srgb, CanvasText 8%, transparent);
+              padding: 1rem;
+              border-radius: var(--radius);
+            "
+          >
+            col 4
+          </div>
+          <div
+            class="col-2"
+            style="
+              background: color-mix(in srgb, LinkText 15%, transparent);
+              padding: 1rem;
+              border-radius: var(--radius);
+            "
+          >
+            .col-2 (spans 2)
+          </div>
+          <div
+            style="
+              background: color-mix(in srgb, CanvasText 8%, transparent);
+              padding: 1rem;
+              border-radius: var(--radius);
+            "
+          >
+            col
+          </div>
+          <div
+            style="
+              background: color-mix(in srgb, CanvasText 8%, transparent);
+              padding: 1rem;
+              border-radius: var(--radius);
+            "
+          >
+            col
+          </div>
+          <div
+            class="col-full"
+            style="
+              background: color-mix(in srgb, LinkText 15%, transparent);
+              padding: 1rem;
+              border-radius: var(--radius);
+            "
+          >
+            .col-full (spans all 4)
+          </div>
+        </div>
+        <h3>Section dividers</h3>
+        <p>
+          Adjacent <code>section</code> elements are separated by a faint
+          <code>--border</code> top rule, as you can see throughout this page.
+        </p>
+      </section>
+      <section id="media">
+        <h2>Media</h2>
+        <h3>Image</h3>
+        <p>
+          Images are block-level, max-width 100%, with
+          <code>border-radius: var(--radius)</code>.
+        </p>
+        <img
+          src="https://placehold.co/760x320"
+          alt="A placeholder image demonstrating responsive img styling"
+          width="760"
+          height="320"
+        />
+        <h3>SVG (inline)</h3>
+        <p>SVG elements are block-level but have no border-radius applied.</p>
+        <svg
+          viewBox="0 0 400 80"
+          xmlns="http://www.w3.org/2000/svg"
+          width="400"
+          height="80"
+          aria-label="Simple SVG waveform demonstration"
+        >
+          <polyline
+            points="0,40 40,10 80,60 120,20 160,50 200,15 240,55 280,25 320,45 360,10 400,40"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+        </svg>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <a href="https://codeberg.org/duras/issei">⚡&nbsp;shide.css</a>
+      </p>
+    </footer>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "shide.css — element reference",
+        "description": "A minimal semantic CSS stylesheet for text-first interfaces. Demonstrates all supported HTML elements using native markup.",
+        "url": "https://duras.codeberg.page/shide/",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "issei",
+          "url": "https://codeberg.org/duras/issei"
+        },
+        "about": {
+          "@type": "SoftwareSourceCode",
+          "name": "shide.css",
+          "codeRepository": "https://codeberg.org/duras/shide",
+          "programmingLanguage": "CSS",
+          "license": "https://spdx.org/licenses/ISC.html"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Sergiy Duras"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "issei"
+        }
+      }
+    </script>
+  </body>
+</html>
