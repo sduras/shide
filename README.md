@@ -17,4 +17,4 @@ shide provides clean, readable typography and layout for documents and small sit
 - Media queries for reduced motion and narrow viewports
 - Small, dependency-free, and easy to integrate
 
-[Demo](https://duras.codeberg.page/shide/)
+[Demo](https://sduras.github.io/shide/)
