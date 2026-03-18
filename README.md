@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/license-ISC-blue)](https://opensource.org/licenses/ISC)
 
 This template is intended for use with the hase static site generator.
+Very lightweight - just **2kb** (minified + gzipped).
 
 ## Overview
 
